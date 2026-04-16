@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* BODY */
+body {
+    background-color: #e8f0ff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+}
+
+/* HEADER */
+header {
+    background-color: #ffffff;
+    border-bottom: 2px solid #000000;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    color: #1e3a8a;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    background-color: #1e3a8a;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+nav a.active {
+    background-color: #0041c2;
+}
+
+.quotes-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.quote-card {
+    background-color: #A5CCE3;
+    padding: 1.5rem;
+    border-left: 5px solid #3278A3;
+    border-radius: 8px;
+}
+
+.quote-card h3 {
+    margin-bottom: 0.8rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #102836;
+}
+
+.quote-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #023E8A;
+}
+
+/* DARK BUTTON */
+.dark-toggle {
+    margin-left: auto;
+    padding: 7px 12px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid black;
+    background: white;
+    color: black;
+}
+
+.dark-mode .dark-toggle {
+    background: black;
+    color: white;
+    border: 2px solid white;
+}
+
+/* MAIN */
+main {
+    flex: 1;
+    padding: 40px;
+}
+
+/* CARDS / BOXES */
+.hero,
+.preview-box,
+.highlights,
+.about-container,
+.form-container {
+    background: #ffffff;
+    color: #000;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    margin-bottom: 50px;
+}
+
+.hero-text { width: 55%; }
+
+.hero-image {
+    width: 200px;
+    border-radius: 12px;
+    border: 3px solid #1e3a8a;
+}
+
+.previews {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.preview-box { padding: 25px; text-align: center; }
+
+.highlights {
+    padding: 20px;
+    margin-bottom: 30px;
+    border-left: 5px solid #000000;
+}
+
+.about-container {
+    padding: 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-icon img {
+    width: 200px;
+    border-radius: 12px;
+    border: 3px solid #1e3a8a;
+}
+
+.form-container {
+    padding: 30px;
+    max-width: 500px;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+}
+
+/* ===== RESOURCE TABLE GRID STYLE ===== */
+.resource-table {
+    width: 55%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.resource-table th,
+.resource-table td {
+    border: 1px solid #ddd;
+    padding: 14px;
+    text-align: left;
+}
+
+/* header */
+.resource-table th {
+    background-color: #1e3a8a;
+    color: white;
+}
+
+/* zebra rows */
+.resource-table tr:nth-child(even) {
+    background-color: #f2f6ff;
+}
+
+/* dark mode */
+.dark-mode .resource-table th {
+    background-color: #1e3a8a;
+}
+
+.dark-mode .resource-table td {
+    border-color: #444;
+	background-color: #000000
+}
+
+
+/* BUTTON */
+button {
+    margin-top: 0px;
+    padding: 10px;
+    background-color: #1e3a8a;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #ffffff;
+    border-top: 2px solid #000000;
+    text-align: center;
+    padding: 15px 0;
+    color: #000000;
+}
+
+/* -------- DARK MODE -------- */
+
+.dark-mode {
+    background-color: #404040;
+    color: #ffffff;
+}
+
+.dark-mode header,
+.dark-mode footer {
+    background-color: #282828;
+    color: white;
+}
+
+.dark-mode .site-title {
+    color: #60a5fa;
+}
+
+.dark-mode nav a {
+    background-color: #0041c2;
+}
+.dark-mode .active {
+	    background-color: #1e3a8a;
+}
+.dark-mode .hero,
+.dark-mode .preview-box,
+.dark-mode .highlights,
+.dark-mode .about-container,
+.dark-mode .form-container {
+    background: #282828;
+    color: #ffffff;
+}
+
+.dark-mode input,
+.dark-mode textarea {
+    background: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+.error {
+    color: red;
+    font-size: 0.8em;
+}
+
+.mini-game {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.game-box {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.target-letter {
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #1e3a8a;
+}
+
+.letter-buttons {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.letter-buttons button {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+.dark-mode .game-box {
+    background: #1e1e1e;
+}
+
+.dark-mode .target-letter {
+    color: #60a5fa;
+}
+/* SPLASH PAGE STYLES */
+.splash-container {
+    background: linear-gradient(135deg, #1e3a8a, #e8f0ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    margin: -40px; /* Offset the main padding if needed */
+}
+.loader img {
+    width: 150px;
+    border-radius: 25%;
+    border: 4px solid #0504AA;
+    margin-bottom: 20px;
+}
+.spinner {
+    width: 70px;
+    height: 70px;
+    border: 8px solid rgba(255,255,255,0.3);
+    border-top: 8px solid #0504AA;
+    border-radius: 50%;
+    margin: 20px auto;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
