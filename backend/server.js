@@ -9,7 +9,7 @@ connectDB();
 const app = express();
 
 // Middleware
-app.use(cors({ origin: 'http://localhost:3000' })); // Allows React to connect
+app.use(cors()); // Allows React to connect
 app.use(express.json()); // Parses incoming JSON data
 app.use(express.urlencoded({ extended: true })); // Parses form data
 
