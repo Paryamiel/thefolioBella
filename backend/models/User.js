@@ -11,9 +11,9 @@ const userSchema = new mongoose.Schema({
     profilePic: { type: String, default: '' }, // stores filename e.g. 'abc123.jpg'
 }, { timestamps: true });
 
-// Pre-save hook to hash the password before saving it to the database
-userSchema.pre('save', async function(next) {
-    if (!this.isModified('password')) return next();
+// ✅ FIXED — remove next parameter entirely:
+userSchema.pre('save', async function() {
+    if (!this.isModified('password')) return;
     const salt = await bcrypt.genSalt(10);
     this.password = await bcrypt.hash(this.password, salt);
 });
