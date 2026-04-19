@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/api/:match*", "destination": "https://thefolibella.onrender.com/api/:match*" },
-    { "source": "/uploads/:match*", "destination": "https://thefolibella.onrender.com/uploads/:match*" }
+    { "source": "/api/:match*", "destination": "https://thefoliobella.onrender.com/api/:match*" },
+    { "source": "/uploads/:match*", "destination": "https://thefoliobella.onrender.com/uploads/:match*" }
   ]
 }
